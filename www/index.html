@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+        <title>DenunciaSLP</title>
+		
+		<!-- Main Stylesheet -->
+		<link rel="stylesheet" href="./lungo.js/lungo-1.2.css">
+		<link rel="stylesheet" href="./lungo.js/lungo.theme.default.css">
+		
+		<script src="assets/javascripts/geolocalizacion.js"></script>
+		<script src="assets/javascripts/imei.js"></script>
+		<script src="assets/javascripts/cerrar.js"></script>
+		
+    </head>
+    <body class="app" onload="trapForApplicationExit();">
+        <section id="seccionprincipal">
+		<header data-title="Registra tu denuncia!">
+		</header>
+		
+        <footer class="toolbar with-labels">
+            <nav>
+                <a href="#articuloprincipal" data-target="article" data-icon="home" data-label="Home"></a>
+				
+				<a href="#" data-target="" data-icon="close" onClick="blackberry.app.exit();" data-label="Salir"></a>
+            </nav>
+        </footer>
+		
+		<article id="articuloprincipal">
+			<br><br><br><br>
+			<div align="center">
+			<ul>
+			<li><a href="#denuncia" data-target="section" class="button blue">Denuncia ahora</a></li>
+			
+			<br>
+			<li><a href="#seguimiento" data-target="section" class="button blue">Sigue tu denuncia</a></li>
+			
+			</ul>
+			</div>
+		</article>
+
+        
+        
+		
+    </section>
+	
+	
+	
+	
+	
+	
+	<!--Inicia el formulario para denuncia -->
+	<section id="denuncia">
+		<header data-title="Tipo de robo">
+			
+		
+		</header>
+		
+		<footer class="toolbar with-labels">
+            <nav>
+                <a href="#back" data-target="section" data-icon="home" data-label="Home"></a>
+                <a href="#" data-target="" data-icon="close" onClick="blackberry.app.exit();" data-label="Salir"></a>
+				
+            </nav>
+		
+		</footer>
+		
+        <article id="tiporobo1" class="list scrollable">
+			
+			
+			<ul class="indented">
+			<li><a href="#form2" data-target="article" data-image="assets/images/icon.png" class="button big blue" data-title="Ingresa los datos requeridos">Auto</a></li>
+			
+			<li><a href="#form2" data-target="article" data-image="assets/images/icon.png" class="button big blue" data-title="Ingresa los datos requeridos">Casa</a></li>
+			
+			<li><a href="#form2" data-target="article" data-image="assets/images/icon.png" class="button big blue" data-title="Ingresa los datos requeridos">Persona</a></li>
+			
+			<li><a href="#form2" data-target="article" data-image="assets/images/icon.png" class="button big blue" data-title="Ingresa los datos requeridos">Repartidor</a></li>
+			
+			<li><a href="#form2" data-target="article" data-icon="map" class="button big blue" data-title="Ingresa los datos requeridos">Comercio</a></li>
+			
+			
+			</ul>
+			
+		</article>
+		
+		<article id="form2" class="list scrollable">
+			<div class="indented">
+				<form action="http://www.miservidor.com/subir.php" method="post" autocomplete="on">
+				<ul class="form">
+					
+					
+					<li class="anchor" data-icon="edit">Descripcion de los hechos</li>
+					<li>
+						<label>Ingresa aqui cualquier observacion</label>
+						<textarea rows="4" cols="10" name="descripcion">
+						</textarea>
+					</li>
+					
+					<!--
+					<li class="anchor" data-icon="edit">Donde sucedieron lo hechos</li>
+					<li>
+						<label>Calle, Numero</label>
+						<input type="text" name="calle" placeholder="Calle1, XXXX">
+						<label>Colonia</label>
+						<input type="text" name="colonia">
+						<label>Entrecalles</label>
+						<input type="text" name="entrecalles"placeholder="Calle1, Calle2, ...">
+						<label>Estado</label>
+						<input type="text" name="estado">
+						<label>Municipio</label>
+						<input type="text" name="municipio">
+					</li>
+					
+					-->
+					
+					
+					<li class="anchor" data-icon="edit">Descripcion del sospechoso</li>
+					<li>
+						<label>Cual es su sexo</label>
+						<label class="select">
+							<select class="costum" name="sexo">
+								<option value="afectado">Hombre
+								<option value="testigo">Mujer
+							</select>
+						</label>
+						
+						<label>Cual es su estatura en metros</label>
+						<label class="select" name="estatura">
+							<select class="costum">
+								<option value="1">Alto
+								<option value="2">Chaparro
+			
+							</select>
+						</label>
+						
+						<label>Cual es su tipo de tez</label>
+						<label class="select">
+							<select class="costum" name="tez">
+								<option value="1">Blanco
+								<option value="2">Moreno Claro
+								<option value="3">Moreno Obscuro
+							</select>
+						</label>
+						
+						<label>Que tipo de ropa vestia</label>
+						<label class="select">
+							<select class="costum" name="ropa">
+								<option value="1">Blusa
+								<option value="2">Camisa
+								
+							</select>
+						</label>
+						
+						<label class="select">
+							<select class="costum" name="ropa">
+								<option value="1">Pantalon
+								<option value="2">Pants
+								
+							</select>
+						</label>
+						
+						<label class="select">
+							<select class="costum" name="ropa">
+								<option value="1">Chamarra
+								<option value="2">Sueter
+								
+							</select>
+						</label>
+						
+						<label>Como es su cabello, tipo</label>
+						<label class="select">
+							<select class="costum" name="cabellocolor">
+								<option value="1">Chino
+								<option value="2">Lazio
+								
+							</select>
+						</label>
+						
+						<label>Como es su complexion</label>
+						<label class="select">
+							<select class="costum" name="complexion">
+								<option value="1">Flaco
+								<option value="2">Gordo
+								
+							</select>
+						</label>
+						
+						
+					</li>
+					
+					<p id="geolocation">Finding geolocation...</p>
+			
+					<p id="deviceProperties">Loading device properties...</p>
+					
+					<li>
+						<input type="submit" value="Enviar Datos">
+					</li>
+					
+				</form>
+			</div>
+		</article>
+	
+	</section>
+	
+	
+	<!--Inicia la seccion para verificar estatus denuncia-->
+	<section id="seguimiento">
+		<header data-title="Seguimiento de tu denuncia"></header>
+		
+		<footer class="toolbar with-labels">
+            <nav>
+                <a href="#back" data-target="section" data-icon="home" data-label="Home"></a>
+                <a href="#" data-target="" data-icon="close" onClick="blackberry.app.exit();" data-label="Salir"></a>
+            </nav>
+		
+		</footer>
+		
+		<article id="checar" class="list">
+			<div class="indented">
+				<form action="http://www.miservidor.com/obtener.php" method="get" autocomplete="on">
+				<ul class="form">
+					<li class="anchor" data-icon="edit">Verifica el estatus de tu denuncia</li>
+					<li>
+						<label>Ingresa el numero de folio</label>
+						<input type="text" name="folio">
+						<input type="submit" value="Realizar consulta"
+					</li>
+				</form>
+			</div>
+			
+			
+			
+		</article>
+		
+	</section>
+	
+	
+
+
+
+		<!-- LungoJS (Production mode) -->
+		<script src="lungo.js/lungo-1.2.js"></script>
+		<!-- LungoJS - Sandbox App -->
+		<script src="app/app.js"></script>
+		<script src="app/data.js"></script>
+		<script src="app/events.js"></script>
+		<script src="app/services.js"></script>
+		<script src="app/view.js"></script>
+		
+		
+		
+        <script type="text/javascript" src="js/webworks.js"></script>
+        <script type="text/javascript" src="cordova-2.1.0.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
